@@ -52,11 +52,17 @@ public class CarController {
                 carBrand.add(c);
             }
         }
+        CarLog message = new CarLog("Search for " + brand);
+        rabbitTemplate.convertAndSend(JavaCarsApplication.QUEUE_NAME, message.toString());
+        log.info( "Search for " + brand);
         return carBrand;
     }
     // upload
     @PostMapping ("upload")
     public List<Car> loadCarData(@RequestBody List<Car> newData){
+        CarLog message = new CarLog("Data loaded");
+        rabbitTemplate.convertAndSend(JavaCarsApplication.QUEUE_NAME, message.toString());
+        log.info("Data Loaded");
         return carRepo.saveAll(newData);
     }
 
