@@ -1,0 +1,64 @@
+DELETE http://localhost:8080/cars/delete/1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-cars/cars.json
+
+<> 2019-03-01T094317.200.json
+
+###
+
+GET http://localhost:8080/cars/year/2010
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-cars/cars.json
+
+<> 2019-03-01T094244.200.json
+
+###
+
+POST http://localhost:8080/cars/upload
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-cars/cars.json
+
+<> 2019-03-01T094221.200.json
+
+###
+
+POST http://localhost:8080/resources
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-cars/cars.json
+
+<> 2019-03-01T094143.404.json
+
+###
+
+POST http://localhost:8080/resources
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-cars/cars.json
+
+<> 2019-03-01T094139.404.json
+
+###
+
+POST http://localhost:8080/resources
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+< C:/JavaProjects/java-cars/cars.json
+
+###
+
